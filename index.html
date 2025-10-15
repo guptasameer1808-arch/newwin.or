@@ -129,7 +129,40 @@
             </div>
         </section>
     </main>
+       <div id="loginModal" class="modal">
 
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    
+    <div id="step1">
+        <h3>Login / Signup</h3>
+        <p>Enter your 10-digit Mobile Number to continue.</p>
+        <form id="mobileForm">
+            <div class="form-group">
+                <label for="mobileNo">Mobile Number</label>
+                <input type="tel" id="mobileNo" name="mobileNo" pattern="[0-9]{10}" placeholder="e.g., 9876543210" required>
+            </div>
+            <button type="button" id="sendOtpBtn" class="btn-submit">Send OTP</button>
+        </form>
+    </div>
+
+    <div id="step2" class="hidden">
+        <h3>Verify OTP</h3>
+        <p>An OTP has been sent to <span id="mobileDisplay"></span></p>
+        <form id="otpForm">
+            <div class="form-group">
+                <label for="otpCode">Enter OTP</label>
+                <input type="text" id="otpCode" name="otpCode" pattern="[0-9]{6}" placeholder="Enter 6-digit OTP" required>
+            </div>
+            <button type="submit" class="btn-submit">Verify & Login</button>
+        </form>
+        <p class="resend-text">Didn't receive it? <a href="#" id="resendOtp">Resend OTP</a></p>
+    </div>
+
+    <p id="modal-message" class="hidden"></p>
+
+  </div>
+</div>
     <footer>
         <div class="container">
             <div class="footer-links">
