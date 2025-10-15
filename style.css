@@ -1,0 +1,471 @@
+/* Base Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1e3d59; /* Deep Navy Blue */
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffc107; /* Gold/Yellow for links */
+}
+
+/* --- Utility Buttons (CTAs) --- */
+.btn-cta, .btn-tour, .btn-submit, .btn-cta-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-cta {
+    background-color: #ffc107; /* Primary Gold */
+    color: #1e3d59; /* Deep Navy Blue */
+    border: 2px solid #ffc107;
+}
+
+.btn-cta:hover {
+    background-color: #f8b400; /* Darker Gold */
+}
+
+.btn-cta-nav {
+    background-color: #ffc107;
+    color: #1e3d59 !important;
+    padding: 8px 15px !important;
+    border-radius: 5px;
+}
+
+.btn-cta-nav:hover {
+    background-color: #f8b400;
+}
+
+.btn-cta-secondary {
+    background-color: #1e3d59;
+    color: #ffffff;
+    border: 2px solid #1e3d59;
+    margin-top: 20px;
+}
+
+.btn-cta-secondary:hover {
+    background-color: #295179;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #1e3d59;
+    font-weight: 700;
+}
+
+.logo i {
+    color: #ffc107;
+    margin-right: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    font-weight: 600;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1770&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* --- Services Section --- */
+.services {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.service-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-cards .card {
+    flex: 1;
+    max-width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-top: 5px solid #ffc107;
+}
+
+.service-cards .card i {
+    font-size: 3em;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.service-cards .card h4 {
+    color: #1e3d59;
+    margin-bottom: 10px;
+}
+
+/* --- Featured Tours Section --- */
+.tours {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.tour-gallery {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tour-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    transition: transform 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 20px;
+}
+
+.tour-info h4 {
+    color: #1e3d59;
+    margin-bottom: 5px;
+}
+
+.tour-info .duration {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.tour-info .duration i {
+    margin-right: 5px;
+}
+
+.tour-info .price {
+    font-weight: 700;
+    color: #ffc107;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.btn-tour {
+    background-color: #1e3d59;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.btn-tour:hover {
+    background-color: #295179;
+}
+
+/* --- About/Testimonials Section --- */
+.about {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonial-card {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border-left: 5px solid #ffc107;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.client-info {
+    text-align: right;
+}
+
+.client-name {
+    font-weight: 600;
+    color: #1e3d59;
+}
+
+.client-trip {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* --- Contact Section --- */
+.contact {
+    background-color: #e9ecef;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1e3d59;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #1e3d59;
+    color: white;
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: #295179;
+}
+
+#form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1e3d59;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #3d6083;
+}
+
+.footer-links .col {
+    width: 30%;
+}
+
+.footer-links h4 {
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    color: #c0c0c0;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffc107;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #c0c0c0;
+}
+
+
+/* --- Responsiveness (Mobile First Adjustments) --- */
+@media (max-width: 900px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-cards .card {
+        max-width: 90%;
+    }
+    .tour-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tour-card {
+        max-width: 90%;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-links .col {
+        width: 100%;
+    }
+    .social-icons {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+    .btn-cta {
+        padding: 10px 20px;
+    }
+}
